@@ -12,7 +12,6 @@ class AnaliseRiscoController {
           message: "CPF inválido. Deve conter 11 dígitos.",
         });
       }
-
       const resultado = await analiseRiscoService.analisarRiscoPorCPF(cpf);
 
       res.json({

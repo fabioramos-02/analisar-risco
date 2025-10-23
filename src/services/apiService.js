@@ -31,7 +31,7 @@ class ApiService {
   async buscarScoreCliente(cpf) {
     try {
       const response = await this.scoreApi.get(
-        `/api/score/calcular-score/${cpf}`
+        `/api/score/${cpf}`
       );
       return response.data;
     } catch (error) {

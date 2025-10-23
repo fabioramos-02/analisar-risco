@@ -21,6 +21,7 @@ class ApiClientService {
       const response = await this.validacaoApi.get(
         `/api/validacao/cliente/${cpf}`
       );
+      console.log("✅ Dados do cliente recebidos:", response.data);
 
       if (response.data.status === "success") {
         return response.data.cliente;
@@ -38,7 +39,7 @@ class ApiClientService {
     try {
       console.log(`📊 Buscando score do cliente: ${cpf}`);
       const response = await this.scoreApi.get(
-        `/api/score/calcular-score/${cpf}`
+        `/api/score/${cpf}`
       );
 
       if (response.data.status === "success") {
