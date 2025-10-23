@@ -9,7 +9,7 @@ class ApiService {
     });
 
     this.scoreApi = axios.create({
-      baseURL: process.env.SCORE_API_URL || "http://localhost:3003",
+      baseURL: process.env.SCORE_API_URL || "http://localhost:3000",
       timeout: 10000,
     });
   }
